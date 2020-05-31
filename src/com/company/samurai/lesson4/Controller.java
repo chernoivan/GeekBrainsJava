@@ -16,18 +16,10 @@ public class Controller {
     @FXML
     TextArea chatArea;
 
-    public void btnOneClickAction(ActionEvent actionEvent) {
-        sendMessage(actionEvent, sendButton);
-    }
-
-    public void txtfPressEnter(ActionEvent actionEvent) {
-        sendMessage(actionEvent, messageToChat);
-    }
-
-    private void sendMessage(ActionEvent actionEvent, Object object) {
-        if (actionEvent.getSource().equals(object))
-            if (messageToChat.getText().length() > 0) {
-                chatArea.setText(messageToChat.getText());
+    public void sendMessage(ActionEvent actionEvent) {
+        String newMessage = messageToChat.getText().trim();
+            if (!newMessage.isEmpty()) {
+                chatArea.appendText(newMessage+System.lineSeparator());
                 messageToChat.clear();
             }
     }

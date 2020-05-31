@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -12,11 +9,11 @@
               AnchorPane.leftAnchor="2.0"
               AnchorPane.rightAnchor="2.0"
               AnchorPane.bottomAnchor="29.0"/>
-    <TextField fx:id="messageToChat" text="" onAction="#txtfPressEnter"
+    <TextField fx:id="messageToChat" text="" onAction="#sendMessage"
                AnchorPane.bottomAnchor="2.0"
                AnchorPane.leftAnchor="2.0"
                AnchorPane.rightAnchor="45.0"/>
-    <Button fx:id="sendButton" text="Send" onAction="#btnOneClickAction"
+    <Button fx:id="sendButton" text="Send" onAction="#sendMessage"
             AnchorPane.bottomAnchor="2.0"
             AnchorPane.rightAnchor="2.0"/>
 </AnchorPane>
